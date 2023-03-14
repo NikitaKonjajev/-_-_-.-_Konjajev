@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Приложение_решение_кв.ур_Konjajev", "Приложение_решение_кв.ур_Konjajev\Приложение_решение_кв.ур_Konjajev.pyproj", "{911E8D73-C8D5-4022-9EBB-73DB01051C7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{911E8D73-C8D5-4022-9EBB-73DB01051C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911E8D73-C8D5-4022-9EBB-73DB01051C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7AD09B4-5CE1-46B5-A67D-61978CB58C97}
+	EndGlobalSection
+EndGlobal
