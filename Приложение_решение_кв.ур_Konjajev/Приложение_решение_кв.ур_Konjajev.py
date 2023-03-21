@@ -2,7 +2,10 @@
 from math import *
 raam = Tk()
 raam.title("Tahvel")
-tahvel = Canvas(raam, width=600, height=600, background="white")
+tahvel = Canvas(raam, 
+                width=600, 
+                height=600, 
+                background="white")
 
 x0=0
 y0=0
@@ -27,13 +30,15 @@ raam.mainloop()
 
 raam = Tk()
 raam.title("Шахматная доска")
-tahvel=Canvas(raam, width=600, height=600, background="white")
-width=400
-height=400
-canvas = Canvas(raam, width=width, height=height)
-canvas.pack()
-cell_width=int(width / 8)
-cell_height=int(height / 8)
+Canvas(raam, 
+       width=500, 
+       height=500, 
+       background="white")
+canvas = Canvas()
+width=250
+height=250
+cell_width=int(width/8)
+cell_height=int(height/8)
 for row in range(8):
     for col in range(8):
         x1=col*cell_width
@@ -44,6 +49,7 @@ for row in range(8):
             canvas.create_rectangle(x1,y1,x2,y2,fill="white")
         else:
             canvas.create_rectangle(x1,y1,x2,y2,fill="black")
+canvas.pack()
 raam.mainloop()
 
 """
