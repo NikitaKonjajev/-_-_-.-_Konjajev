@@ -1,8 +1,54 @@
 ﻿from tkinter import *
+from math import *
 raam = Tk()
 raam.title("Tahvel")
-tahvel = Canvas(raam, width=700, height=500, background="white")
+tahvel = Canvas(raam, width=600, height=600, background="white")
+
+
+x0=0
+y0=0
+x1=600
+y1=600
+a=300
+r=(a**2+a**2)**(1/2)
+p=(a-r)
+for i in range(12):
+    x0+=p
+    y0+=p
+    x1-=p
+    y1-=p
+    tahvel.create_rectangle(x0,y0,x1,y1,width=1,outline="blue",fill="red")
+    tahvel.create_oval(x0,y0,x1,y1,width=1,outline="blue",fill="yellow")
+    p=r-a 
+    r=r-p
+    a=((r)*sqrt(2))/2
 tahvel.grid()
+raam.mainloop()
+
+# Создаем главное окно
+root = Tk()
+root.title("Шахматная доска")
+# Создаем холст
+canvas_width = 400
+canvas_height = 400
+canvas = Canvas(root, width=canvas_width, height=canvas_height)
+canvas.pack()
+# Размер ячеек
+cell_width = int(canvas_width / 8)
+cell_height = int(canvas_height / 8)
+# Создаем ячейки
+for row in range(8):
+    for col in range(8):
+        x1 = col * cell_width
+        y1 = row * cell_height
+        x2 = x1 + cell_width
+        y2 = y1 + cell_height
+        if (row + col) % 2 == 0:
+            canvas.create_rectangle(x1, y1, x2, y2, fill="white")
+        else:
+            canvas.create_rectangle(x1, y1, x2, y2, fill="black")
+raam.mainloop()
+"""
 #1 флаг
 tahvel.create_rectangle(25,50, 250,150,fill="#4cacc2")
 tahvel.create_rectangle(25,100, 250,150,fill="yellow")
@@ -16,7 +62,7 @@ tahvel.create_polygon(25,50, 110,125, 25,200, fill="black")
 #3 флаг 
 tahvel.create_rectangle(25,250,  250,300,fill="white")
 tahvel.create_rectangle(25,350,  250,300,fill="red")
-
+"""
 raam.mainloop()
 
 
