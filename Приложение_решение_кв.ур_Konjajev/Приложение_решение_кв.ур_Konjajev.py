@@ -4,7 +4,6 @@ raam = Tk()
 raam.title("Tahvel")
 tahvel = Canvas(raam, width=600, height=600, background="white")
 
-
 x0=0
 y0=0
 x1=600
@@ -25,18 +24,16 @@ for i in range(12):
 tahvel.grid()
 raam.mainloop()
 
-# Создаем главное окно
-root = Tk()
-root.title("Шахматная доска")
-# Создаем холст
+
+raam = Tk()
+raam.title("Шахматная доска")
+
 canvas_width = 400
 canvas_height = 400
-canvas = Canvas(root, width=canvas_width, height=canvas_height)
+canvas = Canvas(raam, width=canvas_width, height=canvas_height)
 canvas.pack()
-# Размер ячеек
 cell_width = int(canvas_width / 8)
 cell_height = int(canvas_height / 8)
-# Создаем ячейки
 for row in range(8):
     for col in range(8):
         x1 = col * cell_width
@@ -48,6 +45,7 @@ for row in range(8):
         else:
             canvas.create_rectangle(x1, y1, x2, y2, fill="black")
 raam.mainloop()
+
 """
 #1 флаг
 tahvel.create_rectangle(25,50, 250,150,fill="#4cacc2")
