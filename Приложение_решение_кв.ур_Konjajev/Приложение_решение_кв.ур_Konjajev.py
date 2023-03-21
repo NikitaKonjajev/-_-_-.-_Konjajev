@@ -27,23 +27,23 @@ raam.mainloop()
 
 raam = Tk()
 raam.title("Шахматная доска")
-
-canvas_width = 400
-canvas_height = 400
-canvas = Canvas(raam, width=canvas_width, height=canvas_height)
+tahvel=Canvas(raam, width=600, height=600, background="white")
+width=400
+height=400
+canvas = Canvas(raam, width=width, height=height)
 canvas.pack()
-cell_width = int(canvas_width / 8)
-cell_height = int(canvas_height / 8)
+cell_width=int(width / 8)
+cell_height=int(height / 8)
 for row in range(8):
     for col in range(8):
-        x1 = col * cell_width
-        y1 = row * cell_height
-        x2 = x1 + cell_width
-        y2 = y1 + cell_height
-        if (row + col) % 2 == 0:
-            canvas.create_rectangle(x1, y1, x2, y2, fill="white")
+        x1=col*cell_width
+        y1=row*cell_height
+        x2=x1+cell_width
+        y2=y1+cell_height
+        if (row+col) % 2 == 0:
+            canvas.create_rectangle(x1,y1,x2,y2,fill="white")
         else:
-            canvas.create_rectangle(x1, y1, x2, y2, fill="black")
+            canvas.create_rectangle(x1,y1,x2,y2,fill="black")
 raam.mainloop()
 
 """
