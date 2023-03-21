@@ -1,5 +1,30 @@
 ﻿from tkinter import *
 from math import *
+from random import *
+#1 флаг
+raam = Tk()
+raam.title("Tahvel")
+tahvel = Canvas(raam, 
+                width=600, 
+                height=600, 
+                background="white")
+tahvel.create_rectangle(25,50, 250,150,fill="#4cacc2")
+tahvel.create_rectangle(25,100, 250,150,fill="yellow")
+tahvel.create_rectangle(25,200, 250,150,fill="#4cacc2")
+#2 флаг
+tahvel.create_rectangle(500,50, 260,150,fill="blue")
+tahvel.create_rectangle(500,100, 260,150,fill="black")
+tahvel.create_rectangle(500,200, 260,150,fill="white")
+#тругольник на флаге
+tahvel.create_polygon(25,50, 110,125, 25,200, fill="black")
+#3 флаг 
+tahvel.create_rectangle(25,250,  250,300,fill="white")
+tahvel.create_rectangle(25,350,  250,300,fill="red")
+tahvel.grid()
+raam.mainloop()
+
+
+#квадраты
 raam = Tk()
 raam.title("Tahvel")
 tahvel = Canvas(raam, 
@@ -27,47 +52,67 @@ for i in range(12):
 tahvel.grid()
 raam.mainloop()
 
-
-raam = Tk()
-raam.title("Шахматная доска")
-Canvas(raam, 
+#шахматы
+raam3 = Tk()
+raam3.title("Шахматная доска")
+Canvas(raam3, 
        width=500, 
        height=500, 
        background="white")
 canvas = Canvas()
 width=250
 height=250
-cell_width=int(width/8)
-cell_height=int(height/8)
+width1=int(width/8)
+height1=int(height/8)
 for row in range(8):
     for col in range(8):
-        x1=col*cell_width
-        y1=row*cell_height
-        x2=x1+cell_width
-        y2=y1+cell_height
+        x1=col*width1
+        y1=row*height1
+        x2=x1+width1
+        y2=y1+height1
         if (row+col) % 2 == 0:
             canvas.create_rectangle(x1,y1,x2,y2,fill="white")
         else:
             canvas.create_rectangle(x1,y1,x2,y2,fill="black")
 canvas.pack()
-raam.mainloop()
+raam3.mainloop()
 
-"""
-#1 флаг
-tahvel.create_rectangle(25,50, 250,150,fill="#4cacc2")
-tahvel.create_rectangle(25,100, 250,150,fill="yellow")
-tahvel.create_rectangle(25,200, 250,150,fill="#4cacc2")
-#2 флаг
-tahvel.create_rectangle(500,50, 260,150,fill="blue")
-tahvel.create_rectangle(500,100, 260,150,fill="black")
-tahvel.create_rectangle(500,200, 260,150,fill="white")
-#тругольник на флаге
-tahvel.create_polygon(25,50, 110,125, 25,200, fill="black")
-#3 флаг 
-tahvel.create_rectangle(25,250,  250,300,fill="white")
-tahvel.create_rectangle(25,350,  250,300,fill="red")
-"""
-raam.mainloop()
+#круг
+colors=["black",
+        "cyan",
+        "magenta",
+        "red",
+        "blue",
+        "gray",
+        "yellow",
+        "green",
+        "lightblue",
+        "pink",
+        "gold"]
+raam2=Tk()
+raam2.title("Ringid")
+tahvel2=Canvas(raam2,width=600,height=600,bg="white")
+x=0
+y0=0
+x1=600
+y2=600
+p=5
+for i in range(55):
+    x0+=p 
+    y0+=p
+    x1-=p 
+    y1-=p 
+    tahvel2.create_oval(x0,y0,x1,y1, fill=choice(colors))
+    #sleep(1)
+tahvel2.grid()
+raam2.mainloop()
+
+
+
+
+
+
+
 
 
 
