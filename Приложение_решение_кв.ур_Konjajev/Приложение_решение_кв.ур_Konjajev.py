@@ -1,7 +1,9 @@
-﻿"""
+﻿
 from tkinter import *
 from math import *
 from random import *
+
+
 #1 флаг
 raam = Tk()
 raam.title("Tahvel")
@@ -107,7 +109,7 @@ for i in range(55):
     #sleep(1)
 tahvel2.grid()
 raam2.mainloop()
-"""
+
 
 
 
@@ -116,7 +118,7 @@ raam2.mainloop()
 
 #квадратные уровнения
 
-"""
+
 tekst="Квадратные уравнения"
 aken=Tk()
 aken.geometry("600x200")
@@ -201,4 +203,4 @@ nupp.pack(side=LEFT)
 
 
 aken.mainloop()
-"""
+
