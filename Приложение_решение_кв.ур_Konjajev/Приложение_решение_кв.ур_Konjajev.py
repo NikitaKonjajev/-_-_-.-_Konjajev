@@ -1,4 +1,5 @@
-﻿from tkinter import *
+﻿"""
+from tkinter import *
 from math import *
 from random import *
 #1 флаг
@@ -106,7 +107,7 @@ for i in range(55):
     #sleep(1)
 tahvel2.grid()
 raam2.mainloop()
-
+"""
 
 
 
