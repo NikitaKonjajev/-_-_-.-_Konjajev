@@ -120,7 +120,13 @@ def valik(): #можно поставить значение от которог
             #sleep(1)
         tahvel6.grid()
         raam6.mainloop()
-        
+    elif num == 7:
+
+
+
+
+
+
 aken=Tk()
 aken.title("Erinevad nupud")
 aken.geometry("200x300")
@@ -132,7 +138,7 @@ r3=Radiobutton(aken,text="Флаг Польши",variable=var,value=3,command=va
 r4=Radiobutton(aken,text="Квадраты",variable=var,value=4,command=valik)
 r5=Radiobutton(aken,text="шахматы",variable=var,value=5,command=valik)
 r6=Radiobutton(aken,text="круги",variable=var,value=6,command=valik)
-r7=Radiobutton(aken,text="светик",variable=var,value=7,command=valik)
+r7=Radiobutton(aken,text="светофор",variable=var,value=7,command=valik)
 lbox=Listbox(aken,height=3,width=30) 
 
 lbox.grid(row=0,column=0,columnspan=2)
