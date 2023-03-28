@@ -4,6 +4,39 @@ from math import *
 from random import *
 from tkinter import font 
 from класс1 import *
+def valik():
+    num = var.get()
+    if num == 1:
+        lbox.insert(END, "Флаг Богамских островов")
+    elif num == 2:
+        lbox.insert(END, "Эст флаг")
+    elif num == 3:
+        lbox.insert(END, "Флаг Польши")
+    elif num == 4:
+        lbox.insert(END, "Квадраты")
+    elif num == 5:
+        lbox.insert(END, "шахматы")
+    elif num == 6:
+        lbox.insert(END, "круги")
+    elif num == 7:
+        lbox.insert(END, "светофор")
+    elif num == 8:
+        lbox.insert(END, "не рабочий светофор")
+
+aken=Tk()
+aken.title("Erinevad nupud")
+aken.geometry("200x300")
+var=IntVar() #StringVar()
+r1=Radiobutton(aken,text="Флаг Богамских островов",variable=var,value=1,command=valik)
+r2=Radiobutton(aken,text="Эст флаг",variable=var,value=2,command=valik)
+r3=Radiobutton(aken,text="Флаг Польши",variable=var,value=3,command=valik)
+r4=Radiobutton(aken,text="Квадраты",variable=var,value=4,command=valik)
+r5=Radiobutton(aken,text="шахматы",variable=var,value=5,command=valik)
+r6=Radiobutton(aken,text="круги",variable=var,value=6,command=valik)
+r7=Radiobutton(aken,text="светофор",variable=var,value=7,command=valik)
+r8=Radiobutton(aken,text="не рабочий светофор",variable=var,value=8,command=valik)
+lbox=Listbox(aken,height=3,width=30) 
+
 def valik(): #можно поставить значение от которогог зависити функция
     num=var.get()
     if num == 1:
@@ -121,25 +154,43 @@ def valik(): #можно поставить значение от которог
         tahvel6.grid()
         raam6.mainloop()
     elif num == 7:
+        raam9 = Tk()
+        raam9.title("Tahvel")
+        tahvel = Canvas(raam9, width=350, height=500, background="white")
+        tahvel.grid()
+
+        tahvel.create_line(0, 250, 250, 250, width=500, fill="white")
+        font1 = font.Font(font="Algerian 12")
+        tahvel.create_text(50, 10, text="Valgusfoor", font=font1, anchor=NW)
+        tahvel.create_line(150, 100, 200, 100, width=45, fill="red")
+        tahvel.create_line(150, 150, 200, 150, width=45, fill="yellow")
+        tahvel.create_line(150, 200, 200, 200, width=45, fill="green")
+        tahvel.create_line(175, 230, 175, 450, width=8, fill="black")
+        tahvel.create_line(80, 460, 260, 460, width=4, fill="black")
+        tahvel.grid()
+        raam9.mainloop()
+    elif num == 8:
+        raam91 = Tk()
+        raam91.title("Tahvel")
+        tahvel = Canvas(raam91, width=350, height=500, background="white")
+        tahvel.grid()
+
+        tahvel.create_line(0, 250, 250, 250, width=500, fill="white")
+        font1 = font.Font(font="Algerian 12")
+        tahvel.create_text(50, 10, text="Valgusfoor", font=font1, anchor=NW)
+        tahvel.create_line(150, 100, 200, 100, width=45, fill="grey")
+        tahvel.create_line(150, 150, 200, 150, width=45, fill="grey")
+        tahvel.create_line(150, 200, 200, 200, width=45, fill="grey")
+        tahvel.create_line(175, 230, 175, 450, width=8, fill="black")
+        tahvel.create_line(80, 460, 260, 460, width=4, fill="black")
+        tahvel.grid()
+        raam91.mainloop()
 
 
 
 
 
 
-aken=Tk()
-aken.title("Erinevad nupud")
-aken.geometry("200x300")
-var=IntVar() #StringVar()
-
-r1=Radiobutton(aken,text="Флаг Богамских островов",variable=var,value=1,command=valik)
-r2=Radiobutton(aken,text="Эст флаг",variable=var,value=2,command=valik)
-r3=Radiobutton(aken,text="Флаг Польши",variable=var,value=3,command=valik)
-r4=Radiobutton(aken,text="Квадраты",variable=var,value=4,command=valik)
-r5=Radiobutton(aken,text="шахматы",variable=var,value=5,command=valik)
-r6=Radiobutton(aken,text="круги",variable=var,value=6,command=valik)
-r7=Radiobutton(aken,text="светофор",variable=var,value=7,command=valik)
-lbox=Listbox(aken,height=3,width=30) 
 
 lbox.grid(row=0,column=0,columnspan=2)
 r1.grid(row=1,column=0)
@@ -149,7 +200,7 @@ r4.grid(row=4,column=0)
 r5.grid(row=5,column=0)
 r6.grid(row=6,column=0)
 r7.grid(row=7,column=0)
-
+r8.grid(row=8,column=0)
 aken.mainloop()
 
 
